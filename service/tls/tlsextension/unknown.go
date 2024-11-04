@@ -13,7 +13,3 @@ func ParseUnknownTLSExtension(raw mtls.TLSExtensionRaw) *UnknownTLSExtension {
 func (u *UnknownTLSExtension) Bin() []byte {
 	return u.bin
 }
-
-func (u *UnknownTLSExtension) Type() uint16 {
-	return u.rawType
-}

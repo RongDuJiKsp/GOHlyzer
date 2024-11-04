@@ -15,10 +15,6 @@ type ServerNameTLSExtension struct {
 	ServiceNames []ServiceName
 }
 
-func (s *ServerNameTLSExtension) Type() uint16 {
-	return s.rawType
-}
-
 type ServiceName struct {
 	NameType uint8
 	Name     []byte

@@ -18,9 +18,6 @@ type SupposedVersionTLSExtension struct {
 	SupposedVersion []uint16
 }
 
-func (s *SupposedVersionTLSExtension) Type() uint16 {
-	return s.rawType
-}
 func ParseSupposedVersionExtension(raw mtls.TLSExtensionRaw) *SupposedVersionTLSExtension {
 	buffer := bytes.NewBuffer(raw.Bytes)
 	var serverNameListLen uint8
