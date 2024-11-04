@@ -1,7 +1,7 @@
 package capture
 
-import "GOHlyzer/flowhd"
+import "GOHlyzer/handler"
 
 type Caper interface {
-	StartWith(h flowhd.FlowHandler)
+	StartWith(h handler.FlowHandler)
 }

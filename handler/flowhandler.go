@@ -1,4 +1,4 @@
-package flowhd
+package handler
 
 import "github.com/google/gopacket"
 

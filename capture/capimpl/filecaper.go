@@ -2,7 +2,7 @@ package capimpl
 
 import (
 	"GOHlyzer/capture"
-	"GOHlyzer/flowhd"
+	"GOHlyzer/handler"
 	"github.com/google/gopacket/pcap"
 	"os"
 )
@@ -22,6 +22,6 @@ func NewFileCaper(filepath string) (*FileCaper, error) {
 	}
 	return &FileCaper{handler: handler}, nil
 }
-func (f *FileCaper) StartWith(h []flowhd.FlowHandler) {
+func (f *FileCaper) StartWith(h []handler.FlowHandler) {
 	capture.HandleWith(f.handler, h)
 }

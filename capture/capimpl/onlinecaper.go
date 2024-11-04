@@ -2,7 +2,7 @@ package capimpl
 
 import (
 	"GOHlyzer/capture"
-	"GOHlyzer/flowhd"
+	"GOHlyzer/handler"
 	"github.com/google/gopacket/pcap"
 	"time"
 )
@@ -24,6 +24,6 @@ func NewOnlineCaper(driveName string) (*OnlineCaper, error) {
 	}
 	return &OnlineCaper{handler: handler}, err
 }
-func (o *OnlineCaper) StartWith(h []flowhd.FlowHandler) {
+func (o *OnlineCaper) StartWith(h []handler.FlowHandler) {
 	capture.HandleWith(o.handler, h)
 }
