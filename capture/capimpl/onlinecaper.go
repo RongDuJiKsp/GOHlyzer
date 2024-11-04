@@ -18,11 +18,11 @@ type OnlineCaper struct {
 }
 
 func NewOnlineCaper(driveName string) (*OnlineCaper, error) {
-	handler, err := pcap.OpenLive(driveName, snapshotLen, promiscuous, timeout)
+	hd, err := pcap.OpenLive(driveName, snapshotLen, promiscuous, timeout)
 	if err != nil {
 		return nil, err
 	}
-	return &OnlineCaper{handler: handler}, err
+	return &OnlineCaper{handler: hd}, err
 }
 func (o *OnlineCaper) StartWith(h []handler.FlowHandler) {
 	capture.HandleWith(o.handler, h)

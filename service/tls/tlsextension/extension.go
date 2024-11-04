@@ -14,6 +14,9 @@ type BaseTLSExtension struct {
 	rawType uint16
 }
 
+func (b *BaseTLSExtension) Type() uint16 {
+	return b.rawType
+}
 func Distinguish(raw mtls.TLSExtensionRaw) TLSExtension {
 	if raw.Type == ExtensionServiceNameFlag {
 		return ParseServerNameExtension(raw)

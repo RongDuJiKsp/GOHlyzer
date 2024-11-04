@@ -1,6 +1,6 @@
 package tlsextension
 
-import mtls "dns-tunnel-flowcatcher/util/tls"
+import mtls "GOHlyzer/service/tls"
 
 type UnknownTLSExtension struct {
 	BaseTLSExtension

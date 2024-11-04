@@ -1,8 +1,8 @@
 package tlsextension
 
 import (
+	mtls "GOHlyzer/service/tls"
 	"bytes"
-	mtls "dns-tunnel-flowcatcher/util/tls"
 	"encoding/binary"
 )
 
