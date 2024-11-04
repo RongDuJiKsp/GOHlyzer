@@ -24,5 +24,6 @@ func Distinguish(raw mtls.TLSExtensionRaw) TLSExtension {
 	if raw.Type == ExtensionSupposedVersionFlag {
 		return ParseSupposedVersionExtension(raw)
 	}
+
 	return ParseUnknownTLSExtension(raw)
 }
